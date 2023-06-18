@@ -1,0 +1,11 @@
+---
+- hosts: group1
+  become: true
+  tasks:
+  - name: modifydirpermissions
+    file:
+      path: /home/ubuntu
+      state: directory
+      owner: root
+      group: root
+      mode: 777
